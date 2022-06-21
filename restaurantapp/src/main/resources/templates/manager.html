@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manager page</title>
+    <link th:href="@{/css/manager.css}" rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<div class="top">
+    <h1 class="header">HOMETOWN GRUB</h1>
+    <nav class="navi">
+        <ul class="nav-list">
+            <li>
+                <a class="nav-link" th:href="@{/}">Menu</a>
+            </li>
+            <li>
+                <a class="nav-link" href="shopping-cart.html">Cart</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="manager">
+    <div class="manager-box">
+    <h1 class="title">Restaurant Management System</h1>
+        <div class="a-tags">
+    <a th:href="@{/showEmployees}" class="btn btn-primary">Employee Management System</a>
+    <a th:href="@{/menuManagement}" class="btn btn-primary">Menu Management System</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

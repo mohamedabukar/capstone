@@ -1,22 +1,23 @@
 package org.mohamedabukar.restaurantapp.entity;
 
+
 import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name =  "employees")
+@Table(name =  "foods")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Employee {
+public class Foods {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long foodId;
     private String name;
-    private String email;
-    private String password;
-    private String department;
+    private String ingredients;
+    private int price;
 }

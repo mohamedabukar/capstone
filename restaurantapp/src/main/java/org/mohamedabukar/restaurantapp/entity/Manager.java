@@ -5,18 +5,17 @@ import lombok.*;
 import javax.persistence.*;
 
 @Entity
-@Table(name =  "employees")
+@Table(name =  "manager")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class Employee {
+public class Manager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
-    private String email;
-    private String password;
-    private String department;
+    private Long managerId;
+    private String managerName;
+    private String managerEmail;
+    private String managerPassword;
 }
