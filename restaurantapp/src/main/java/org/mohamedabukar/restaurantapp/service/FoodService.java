@@ -25,12 +25,12 @@ public class FoodService {
         fRepo.save(food);
     }
 
-    public Foods getFoodById(long id){
-        return fRepo.findById(id).get();
+    public Foods getFoodById(Long foodId){
+        return fRepo.findById(foodId).get();
     }
 
-    public void deleteFood(long id){
-        fRepo.deleteById(id);
+    public void deleteFood(Long foodId){
+        fRepo.deleteById(foodId);
     }
 
     public void addToorder(Foods food){

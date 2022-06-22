@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Cart</title>
+    <title>HOMETOWN GRUB</title>
     <link th:href="@{/css/manager.css}" rel="stylesheet" />
     <link rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -21,10 +21,18 @@
                 <a class="nav-link" href="shopping-cart.html">Cart</a>
             </li>
             <li>
-                <a class="nav-link" th:href="@{/worker}">Worker</a>
+                <a class="nav-link disabled" th:href="@{/worker}">Worker</a>
             </li>
         </ul>
     </nav>
+</div>
+<div class="worker-body">
+    <div class="worker-box">
+        <p>Managers click here</p>
+        <a th:href="@{/managerPage}" class="btn">Manager Page</a>
+        <p>Employees click here</p>
+        <a th:href="@{/employeePage}" class="btn">Employee Page</a>
+    </div>
 </div>
 </body>
 </html>

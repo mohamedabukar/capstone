@@ -44,13 +44,13 @@ public class FoodsController {
         return"redirect:/menuManagement";
     }
     @GetMapping("/updatefoodform")
-    public String updateFoodForm(@RequestParam long foodId, Model model){
+    public String updateFoodForm(@RequestParam Long foodId, Model model){
         Foods food = fService.getFoodById(foodId);
         model.addAttribute("food", food);
         return "add-foods";
     }
     @GetMapping("/deleteFood")
-    public String deletefood(@RequestParam long foodId){
+    public String deletefood(@RequestParam Long foodId){
         fService.deleteFood(foodId);
         return "redirect:/menuManagement";
     }
@@ -64,5 +64,13 @@ public class FoodsController {
     public String addToOrder(){
         System.out.println("@GetMapping");
         return "index";
+    }
+    @GetMapping("/worker")
+    public String worker(){
+        return "worker";
+    }
+    @GetMapping("/employeePage")
+    public String employeePage(){
+        return "employee";
     }
 }

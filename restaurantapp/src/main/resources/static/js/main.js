@@ -3,7 +3,7 @@ showfoods();
 function showfoods(){
     for(let i=0; i<foods.length; i++){
         document.querySelector(".foods").innerHTML +=`
-        <form class="food" id="food${i}" th:action="@{/addToOrder}" th:object="foods" method="POST">
+        <form class="food" id="food${i}" th:action="@{/addToOrder}" th:object="${foods[i]}" method="POST">
             <h3 class="foodName word">${foods[i].name}</h3>
             <p class="ingredients word">The ingredients are: ${foods[i].ingredients}</p>
             <p class="price word">Meal price: $${foods[i].price}</p>
