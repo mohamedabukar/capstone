@@ -3,6 +3,7 @@ package org.mohamedabukar.restaurantapp.controller;
 import org.mohamedabukar.restaurantapp.entity.Employee;
 import org.mohamedabukar.restaurantapp.service.ManagerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,6 +38,9 @@ public class ManagerController {
 
     @PostMapping("/saveEmployee")
     public String saveEmployee(@ModelAttribute Employee employee){
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        String encodedPassword = encoder.encode(employee.getPassword());
+        employee.setPassword(encodedPassword);
         eService.saveEmployees(employee);
         return "redirect:/showEmployees";
     }
@@ -52,5 +56,10 @@ public class ManagerController {
     public String deleteEmployee(@RequestParam Long employeeId){
         eService.deleteById(employeeId);
         return "redirect:/showEmployees";
+    }
+
+    @GetMapping("/login")
+    public String Login(){
+        return "login";
     }
 }

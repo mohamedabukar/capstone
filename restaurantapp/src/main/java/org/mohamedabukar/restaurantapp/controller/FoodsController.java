@@ -6,10 +6,7 @@ import org.mohamedabukar.restaurantapp.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -54,11 +51,13 @@ public class FoodsController {
         fService.deleteFood(foodId);
         return "redirect:/menuManagement";
     }
-    @PostMapping("/addToOrder")
-    public String addToOrder(@ModelAttribute Foods food){
+
+    @PostMapping("/addToOrder/{id}")
+    public String addToOrder(@PathVariable("id") Long foodId){
         System.out.println("@PostMapping");
+        Foods food = fService.getFoodById(foodId);
         fService.addToorder(food);
-        return "index";
+        return "redirect:/";
     }
     @GetMapping("/addToOrder")
     public String addToOrder(){
