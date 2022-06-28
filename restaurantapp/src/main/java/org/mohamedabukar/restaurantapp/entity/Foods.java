@@ -17,6 +17,7 @@ public class Foods {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long foodId;
+    //rows for food table
     private String name;
     private String ingredients;
     private int price;

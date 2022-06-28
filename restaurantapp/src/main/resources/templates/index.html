@@ -18,7 +18,7 @@
             <a class="nav-link disabled" th:href="@{/}">Menu</a>
         </li>
         <li>
-            <a class="nav-link" href="shopping-cart.html">Cart</a>
+            <a class="nav-link" th:href="@{/cart}">Cart</a>
         </li>
         <li>
             <a class="nav-link" th:href="@{/worker}">Worker</a>
@@ -31,7 +31,7 @@
 
             <h3 class="foodName word" th:text="${food.name}" ></h3>
             <p class="ingredients word" th:text="'The ingredients are: '+ ${food.ingredients}" ></p>
-            <p class="price word" th:text="'Price: '+${food.price}" ></p>
+            <p class="price word" th:text="'Price: $'+${food.price}" ></p>
 
             <button class="btn" type="submit">Add to Cart</button>
 
@@ -47,13 +47,4 @@
 
 
     </body>
-    <script type="text/javascript" th:src="@{/js/main.js}"></script>
     </html>
-
-</div>
-<script th:inline="javascript">
-    let foods = [[${foods}]];
-</script>
-</body>
-
-</html>

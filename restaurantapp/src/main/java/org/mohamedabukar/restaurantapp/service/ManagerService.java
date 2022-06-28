@@ -14,14 +14,17 @@ public class ManagerService {
     @Autowired
     private EmployeeRepository eRepo;
 
-
+    //method to find all employees
     public List<Employee> getAllEmployees(){
         return eRepo.findAll();
     }
+
+    //method to save employee into employee table
     public void saveEmployees(Employee employee){
         eRepo.save(employee);
     }
 
+    //method to get a specific employee from employee table by id
     public Employee getEmployeeById(long id){
 
         if(eRepo.findById(id).isPresent()){
@@ -31,6 +34,8 @@ public class ManagerService {
         }
 
     }
+
+    //method to delete employee by their id
     public void deleteById(long id){
         if(eRepo.findById(id).isPresent()){
             eRepo.deleteById(id);

@@ -15,6 +15,7 @@ public class Manager {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long managerId;
+    //rows for manager table
     private String managerName;
     private String managerEmail;
     private String managerPassword;

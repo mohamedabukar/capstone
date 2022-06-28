@@ -15,6 +15,7 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
+    //Rows for customer table
     public String name;
     public String email;
     public String password;

@@ -16,23 +16,25 @@ public class FoodService {
     private OrdersRepository oRepo;
     @Autowired
     private FoodsRepository fRepo;
-
+    //method to show all the foods
     public List<Foods> showFoods(){
         return fRepo.findAll();
     }
 
+    //method to save food in food table
     public void saveFoods(Foods food){
         fRepo.save(food);
     }
-
+    //method to get a specific food from table by food id
     public Foods getFoodById(Long foodId){
-        return fRepo.findById(foodId).get();
+        return fRepo.findId(foodId);
     }
-
+    //method to delete food from food table
     public void deleteFood(Long foodId){
         fRepo.deleteById(foodId);
     }
 
+    //method to add food into order table by food id
     public void addToorder(Foods food){
         Orders order = new Orders();
         order.setFoodId(food.getFoodId());

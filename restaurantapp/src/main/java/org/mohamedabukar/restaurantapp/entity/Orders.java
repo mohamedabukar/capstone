@@ -15,6 +15,7 @@ public class Orders {
 
     @Id
     private long foodId;
+    //rows for orders table
     private String foodName;
     private String ingredients;
     private String Quantity;

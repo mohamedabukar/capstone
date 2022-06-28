@@ -68,8 +68,5 @@ public class FoodsController {
     public String worker(){
         return "worker";
     }
-    @GetMapping("/employeePage")
-    public String employeePage(){
-        return "employee";
-    }
+
 }

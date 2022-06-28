@@ -15,6 +15,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    //rows for employee table
     private String name;
     private String email;
     private String password;
