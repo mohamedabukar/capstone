@@ -1,0 +1,109 @@
+.body{
+    font-family: 'Oswald', sans-serif;
+}
+*{
+
+}
+.nav-list{
+    display: flex;
+    justify-content: center;
+}
+.header{
+    text-align: center;
+    color: #c9c8c8;
+}
+.top{
+    background: #333232;
+}
+.foods{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 800px;
+    width: auto;
+    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHN8ZW58MHx8MHx8&w=1000&q=80");
+    background-size: cover;
+}
+.food{
+    margin: 40px;
+    width: 300px;
+    height: 290px;
+    background: #333232;
+    padding: 20px;
+    border: #333232;
+    color: #c9c8c8;
+    border-radius: 5%;
+}
+.btn{
+    margin-bottom: 10px;
+    background: #c9c8c8;
+}
+.navi {
+    text-align: center;
+}
+.navi ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.foodName{
+    margin-bottom: 50px;
+}
+.word{
+    text-transform: capitalize;
+}
+.navi a{
+    text-decoration: none;
+    color: #c9c8c8;
+    width:100px;
+    padding: 25px 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align:center;
+}
+.navi a:hover{
+    background: orange;
+}
+.disabled{
+    pointer-events: none;
+}
+.add-employees{
+    text-align: center;
+    height: 585px;
+    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHN8ZW58MHx8MHx8&w=1000&q=80");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.add-emp-box{
+    background-color: #333232;
+    color: #c9c8c8;
+    margin: 40px;
+    padding: 20px;
+    height: 300px;
+    width: 300px;
+    border-radius: 5%;
+}
+.login{
+    text-align: center;
+    height: 585px;
+    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cmVzdGF1cmFudHN8ZW58MHx8MHx8&w=1000&q=80");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.login-box{
+    background-color: #333232;
+    color: #c9c8c8;
+    margin: 40px;
+    padding: 20px;
+    height: 350px;
+    width: 300px;
+    border-radius: 5%;
+}
+.login-box input{
+    width:200px;
+    height: 40px;
+    margin-bottom: 20px;
+}
