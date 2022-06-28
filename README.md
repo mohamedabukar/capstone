@@ -6,3 +6,9 @@ A customer can view the menu and add different orders into the cart. From here a
 
 ## Reasons for building the app
 This application makes the whole restaurant process easier by creating a direct line of communication between customers and employees. This makes work easier for waiters by keeping track of orders and removing necessity for waiters in smaller restaurants.
+
+## Instructions
+After cloning this repo you can run it locally and use all of the features of the app. Tables should automaticaly be made through hibernate.
+
+## Future changes
+I plan on adding a log in page for managers. I also plan on adding a customers login so that a customer will be able to log in and see past orders made.
